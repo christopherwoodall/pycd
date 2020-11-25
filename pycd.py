@@ -16,9 +16,6 @@ import dis, importlib, inspect, marshal, opcode, os, re, struct, time, types
 import io, contextlib
 
 
-
-
-
 class Disassembler( object ):
   
   magic_number = importlib.util.MAGIC_NUMBER
@@ -124,15 +121,13 @@ class Disassembler( object ):
           line = "\n".join( line.split( "\n" )[ 1: ] )
         line_number = int( re.sub('[^0-9]+', '', line[ :9 ] ).strip( ) )
         disassembly[ line_number ] = line
-      
-     
+ 
 
 # TODO
 #def main( ):
 #  pass
 #if __name__ == "__main__":
   #main( sys.argv[1] )
-
 
 
 """
